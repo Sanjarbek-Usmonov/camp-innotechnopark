@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/main.css' %}">
+    <title>Asrorbek</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <ul class="header__list">
+                    <li class="header__item-heading"><img class="header_logo" src="{% static './img/logo.png' %}" alt="logo of this web page" width="40" height="40"> SP Center</li>
+                    <li class="header__item"><a href="#" class="header__item-link header__item-link--active"><img class="header__icon" src="{% static './img/project-icon.svg' %}" alt="the icon of project">Projects</a></li>
+                    <li class="header__item"><a href="./projects.html" class="header__item-link"><img class="header__icon" src="{% static './img/project-icon.svg' %}" alt="the icon of project">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__container">
+                    <div class="hero__top">
+                        <div class="hero__t-left">
+                            <!-- <a href="#" class="hero__t-link"></a> -->
+                            
+                            <h3 class="hero__t-heading">IT Sphere</h3>
+                        </div>
+                        
+                        <form class="hero__form">
+                            <label class="hero__label">
+                                <input type="text" name="Search" id="Search" class="hero__search" placeholder="Search">
+                                
+                                <button class="hero__btn">Filter</button>
+                            </label>
+                        </form>
+
+                        <button class="burger__btn"><img class="burger__img" src="{% static './img/burger.png' %}" alt="burger menu" width="30"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="project">
+            <div class="container">
+                <div class="project__container">
+                    <ul class="project__list">
+                        {% for i in query %}
+                        <li class="project__item">
+                            
+                            <div class="project__item-top">
+                                <img src="{{ i.image.url }}" alt="Project item" class="project__item-img" width="300" height="150">
+                            </div>
+                            
+                            <div class="project__item-bottom">
+                                <h4 class="project__b-heading">{{ i.name }}</h4>
+                                
+                                <div class="project__b-text-wrapper">
+                                    <p class="project__b-text">{{ i.category_id.name }}</p>
+                                    
+                                    <p class="project__b-data">{{ i.create_at }}</p>
+                                </div>
+                                
+                                <a href="{% url 'about' pk=i.id %}" class="project__link-wrapper"><button class="project__btn">Learn More</button></a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'dashboard/admin-index.html' %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <a href="{% url 'ctg_list' %}">
+    <button type="button" class="btn btn-wd btn-default btn-fill btn-move-left">
+        <span class="btn-label">
+            <i class="ti-angle-left"></i>
+        </span>
+        Back
+    </button>
+    </a>
+    <a href="{% url 'ctg_list' %}">
+        <button type="submit" class="btn btn-danger btn-fill btn-wd">Save</button>
+    </a>
+</form>
+
+{% endblock %}
+
+
