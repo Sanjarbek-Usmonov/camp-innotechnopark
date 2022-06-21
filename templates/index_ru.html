@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>INNO Science Camp</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
+    <script>
+        function confirmAction() {
+        let confirmAction = confirm("Are you sure to execute this action?");
+        if (confirmAction) {
+          alert("Action successfully executed");
+        }
+        else {
+          alert("Action canceled");
+        }
+      }
+      </script>
+</head>
+
+<body>
+<!-- Navbar Start -->
+<div class="container-fluid bg-light position-relative shadow">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+        <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+            <img src="{% static 'img/logo.png' %}" alt="!" width="56px" height="56px">
+            <span class="text-primary">Science Camp</span>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav font-weight-bold mx-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Главная</a>
+                <a href="#head" class="nav-item nav-link">О нас</a>
+                <a href="#biz" class="nav-item nav-link">Почему мы</a>
+                <a href="#kurs" class="nav-item nav-link">Курсы</a>
+                <a href="#ustoz" class="nav-item nav-link">Учителя</a>
+
+            </div>
+            <a href="{% url 'index' %}" class="btn btn-primary "><img src="{% static 'img/uzb.png' %}" alt="" width="45px" height="30px" > </a>
+            <a href="{% url 'index_ru' %}" class="btn btn-primary "><img src="{% static 'img/rus.png' %}" alt="" width="45px" height="30px"> </a>
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+
+<!-- Header Start -->
+<div id="head" class="container-fluid bg-primary px-0 px-md-5 mb-5">
+    <div class="row align-items-center px-3">
+        <div class="col-lg-6 text-center text-lg-left">
+            <h4 class="text-white mb-4 mt-5 mt-lg-0">INNO Technopark</h4>
+            <h1 class="display-3 font-weight-bold text-white">Science Camp</h1>
+            <p class="text-white mb-4"> Ваш ребенок интересуется новейшими технологиями, робототехникой и электроникой?
+                Подарите ему трехдневное приключение, богатое технологическим опытом. В научном лагере в ИННО технопарке
+                дети от 7 до 14 лет могут пройти курсы робототехники и электроники, научиться рисовать в 3D-графике и
+                печатать ее на 3D-принтере, научиться обрабатывать дерево с помощью лазерного станка и могут
+                познакомиться с секретами космических полетов.
+            </p>
+            <a href="#reg" class="btn btn-secondary mt-1 py-3 px-5">Зарегистрироваться</a>
+        </div>
+        <div class="col-lg-6 text-center text-lg-right">
+            <img class="img-fluid mt-5" src="{% static 'img/header.png' %}" alt="">
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+<!-- About Start -->
+<div id="biz" class="container-fluid py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <img class="img-fluid rounded mb-5 mb-lg-0" src="{% static 'img/about-1.jpg' %}" alt="">
+            </div>
+            <div class="col-lg-7">
+                <p class="section-title pr-5"><span class="pr-2">ПОЧЕМУ МЫ</span></p>
+                <h1 class="mb-4">Лучший выбор для будущего детей</h1>
+                Перерыв длится 3 дня, а первый сезон стартует 13 июня. <br>
+
+                <p>Вкратце, во время перерыва ваш ребенок получит:
+
+                </p>
+                <div class="row pt-2 pb-4">
+                    <div class="col-6 col-md-4">
+                        <img class="img-fluid rounded" src="{% static 'img/about-2.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6 col-md-8">
+                        <ul class="list-inline m-0">
+                            <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>
+                                Курсы робототехники
+                            </li>
+                            <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i> 3D графика</li>
+                            <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>
+                                Курсы электроники
+                            </li>
+                            <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>
+                                Тайны космических полетов.
+                            </li>
+                            <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>
+                                Технология виртуальной реальности
+                            </li>
+                            <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>
+                                Лазерное лечение
+                            </li>
+                            <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>
+                                Работа с 3D-принтерами.
+                            </li>
+                            <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>
+                                Соревнования по робототехнике
+                            </li>
+                            <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>
+                                Химия и физические шоу
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Facilities Start -->
+<div id="kurs" class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <p class="section-title px-5"><span class="px-2">ПРОГРАММА ЛАГЕРЯ</span></p>
+            <h1 class="mb-4">Курсы</h1>
+        </div>
+        <div class="container-fluid pt-5">
+            <div class="container pb-3">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 pb-1">
+                        <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                            <div class="pl-4">
+                                <h4>Робототехника</h4>
+                                <p class="m-0">
+                                    Осваивает интересную для своего возраста программу по робототехнике и участвует в
+                                    соревнованиях по всему миру;
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 pb-1">
+                        <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                            <div class="pl-4">
+                                <h4>Электроника</h4>
+                                <p class="m-0">
+                                    Изучайте электронику, где дети практикуют Arduino и создают своих собственных
+                                    роботов.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 pb-1">
+                        <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                            <div class="pl-4">
+                                <h4>3D моделирование</h4>
+                                <p class="m-0">
+                                    Они на практике освоят 3D-моделирование, а также познакомятся с оборудованием для
+                                    лазерной резки на нашем станке.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 pb-1">
+                        <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                            <div class="pl-4">
+                                <h4>VR</h4>
+                                <p class="m-0">Они будут изучать виртуальную реальность, используя VR-очки.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 pb-1">
+                        <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                            <div class="pl-4">
+                                <h4>Спорт и Кино</h4>
+                                <p class="m-0">Они будут заниматься спортом в нашем спортзале.
+                                    ▪️▪Проведите Movietime с интересными фильмами;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 pb-1">
+                        <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                            <div class="pl-4">
+                                <h4>Здоровое питание</h4>
+                                <p class="m-0">Наша кухня обслуживает два раза в день - обед и полдник.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Facilities Start -->
+
+<!-- Team Start -->
+<div id="ustoz" class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <p class="section-title px-5"><span class="px-2">УЧИТЕЛЯ</span></p>
+            <h1 class="mb-4">Наши квалифицированные преподаватели</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 text-center team mb-5">
+                <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                    <img class="img-fluid w-100" src="{% static 'img/team-2.jpg' %}" alt="">
+                    <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                        <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <h4>Зиёдулла Бутахонов</h4>
+                <i>
+                    Аэрокосмический инженер Министерства инновационного развития, в настоящее время работает со многими
+                    школами по изучению стратосферы и запуску нано спутников.
+                </i>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center team mb-5">
+                <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                    <img class="img-fluid w-100" src="{% static 'img/team-1.jpg' %}" alt="">
+                    <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                        <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <h4>Рустамов Дилмурод</h4>
+                <i>
+                    Инженер 3D-графики в Министерстве инновационного развития, занимается военной техникой в
+                    сотрудничестве с Министерством обороны.
+                </i>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center team mb-5">
+                <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                    <img class="img-fluid w-100" src="{% static 'img/team-3.jpg' %}" alt="">
+                    <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                        <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <h4>Имамов Акбар</h4>
+                <i>
+                    Студент третьего курса Туринского политехнического университета, основатель компании Robot_machines,
+                    создатель электромобилей и двукратный великий владелец.
+                </i>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center team mb-5">
+                <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                    <img class="img-fluid w-100" src="{% static 'img/team-4.jpg' %}" alt="">
+                    <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                        <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                           href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <h4>Ситора Шакирова</h4>
+                <i>
+                    Студентка Ташкентского технического университета YOJU. Современный учитель естественных наук STEAM.
+                    Опыт работы с детьми младшего возраста от двух лет.
+                </i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+<!-- Registration Start -->
+<div class="container-fluid py-5" id="reg">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 mb-5 mb-lg-0">
+                <p class="section-title pr-5"><span class="pr-2">РЕГИСТРАЦИЯ</span></p>
+                <h1 class="mb-4">Торопитесь!</h1>
+                <p>
+                    Дети получат сертификаты Министерства инновационного развития и Школы робототехники при Институте
+                    Yeoju. Перерыв длится 3 дня, а первый сезон стартует 13 июня.
+                </p>
+                <ul class="list-inline m-0">
+                    <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Современные знания</li>
+                    <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Квалифицированные учителя</li>
+                    <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Увлекательный отдых</li>
+                </ul>
+                <a href="" class="btn btn-primary mt-4 py-2 px-4">Записаться на лагерь</a>
+            </div>
+            <div class="col-lg-5">
+                <div class="card border-0">
+                    <div class="card-header bg-secondary text-center p-4">
+                        <h1 class="text-white m-0">Зарегистрироваться</h1>
+                    </div>
+                    <div class="card-body rounded-bottom bg-primary p-5">
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" name="full_name" class="form-control border-0 p-4" placeholder="F.i.O"
+                                       required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="phone" class="form-control border-0 p-4" placeholder="Telefon Raqamingiz"
+                                       required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <select name="date" class="custom-select border-0 px-4" style="height: 47px;">
+                                    <option selected>Число </option>
+                                    <option value="1">27-29 июня</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button class="btn btn-secondary btn-block border-0 py-3" onclick="confirmAction()" type="submit">Потвердить
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Registration End -->
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+            <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+               style="font-size: 40px; line-height: 40px;">
+                <img src="{% static 'img/logo_foot.png' %}" alt="!" width="56px" height="56px">
+                <span class="text-primary">Science Camp</span>
+            </a>
+            <p>Этот лагерь предназначен для тех, кто интересуется робототехникой, STEM технологиями и ИТ . Это
+                отличная возможность для ваших детей, которые хотят провести отпуск продуктивно и весело!</p>
+            <div class="d-flex justify-content-start mt-4">
+                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                   style="width: 38px; height: 38px;" href="#"><i class="fab fa-telegram"></i></a>
+                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                   style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram  "></i></a>
+                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                   style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h3 class="text-primary mb-4">Свяжитесь с нами</h3>
+            <div class="d-flex">
+                <h4 class="fa fa-map-marker-alt text-primary"></h4>
+                <div class="pl-3">
+                    <h5 class="text-white">Адрес</h5>
+                    <p>Ташкент , Алмазарский р., ул. Камарнисо</p>
+                </div>
+            </div>
+            <div class="d-flex">
+
+                <h4 class="fa fa-envelope text-primary"></h4>
+                <div class="pl-3">
+                    <h5 class="text-white">Email</h5>
+                    <p>innotechnopark@mininnovation.uz</p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <h4 class="fa fa-phone-alt text-primary"></h4>
+                <div class="pl-3">
+                    <h5 class="text-white">Телефон</h5>
+                    <p>+99897 110 19 90</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h3 class="text-primary mb-4">Ссылки</h3>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Главная</a>
+                <a class="text-white mb-2" href="#head"><i class="fa fa-angle-right mr-2"></i>О нас</a>
+                <a class="text-white mb-2" href="#nega"><i class="fa fa-angle-right mr-2"></i>Почеум мы</a>
+                <a class="text-white mb-2" href="#kurs"><i class="fa fa-angle-right mr-2"></i>Курсы</a>
+                <a class="text-white mb-2" href="#ustoz"><i class="fa fa-angle-right mr-2"></i>Учителя</a>
+                <a class="text-white" href="#reg"><i class="fa fa-angle-right mr-2"></i>Зарегистрироваться</a>
+                <a class="text-blue" href="{% url 'export_users_csv' %}"><i class="fa fa-angle-right mr-2"></i>Скачать</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, .2);;">
+        <p class="m-0 text-center text-white">
+            &copy; <a class="text-primary font-weight-bold" href="#">INNO Science Camp</a>. All Rights Reserved.
+            Designed by
+            <a class="text-primary font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+
+<!-- Contact Javascript File -->
+<script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+<script src="{% static 'mail/contact.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
